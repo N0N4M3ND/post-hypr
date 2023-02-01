@@ -20,6 +20,5 @@ unzip gruvbox.zip &&
 cd ~ &&
 mv post-hypr/.bashrc ~ &&
 mv post-hypr/.bash_profile ~ &&
-mv post-hypr/.config ~ &&
-rm -rf * &&
+mv post-hypr/.config ~
 
