@@ -1,6 +1,6 @@
 cd ~ &&
 rm -rf .* &
-git cline https://aur.archlinux.org/hyprland-bin &&
+git clone https://aur.archlinux.org/hyprland-bin &&
 git clone https://aur.archlinux.org/pfetch &&
 git clone https://aur.archlinux.org/ttf-material-design-icons-webfont &&
 git clone https://github.com/n0n4m3nd/.wallpapers &&
