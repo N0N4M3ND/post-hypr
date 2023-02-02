@@ -13,11 +13,6 @@ cd ~ &&
 cd ttf-material-design-icons-webfont &&
 makepkg -si &&
 cd ~ &&
-mkdir .themes &&
-mv post-hypr/gruvbox.zip ~/.themes &&
-cd .themes &&
-unzip gruvbox.zip &&
-cd ~ &&
 mv post-hypr/.bashrc ~ &&
 mv post-hypr/.bash_profile ~ &&
 mv post-hypr/.config ~
