@@ -1,10 +1,10 @@
 cd ~ &&
 rm -rf .* &
-git clone https://aur.archlinux.org/hyprland-bin &&
+git clone https://aur.archlinux.org/waybar-hyprland &&
 git clone https://aur.archlinux.org/pfetch &&
 git clone https://aur.archlinux.org/ttf-material-design-icons-webfont &&
 git clone https://github.com/n0n4m3nd/.wallpapers &&
-cd hyprland-bin &&
+cd waybar-hyprland &&
 makepkg -si &&
 cd ~ &&
 cd pfetch &&
