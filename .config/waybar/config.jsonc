@@ -1,0 +1,62 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 25,
+    "modules-left": [
+        "clock",
+        "wlr/workspaces"
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+	"pulseaudio",
+        "pulseaudio#microphone"
+    ],
+
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "wlr/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰝥",
+            "2": "󰝥",
+            "3": "󰝥",
+            "4": "󰝥",
+            "5": "󰝥",
+            "urgent": "󰝥",
+            "active": "󰝥",
+            "default": "󰝥"
+          }
+    },
+
+    "clock": {
+        "format": "{:󰥔 %R}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "󰋋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    }
+}
