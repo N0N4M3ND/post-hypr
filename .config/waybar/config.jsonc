@@ -3,91 +3,73 @@
     "position": "top",
     "mod": "dock",
     "height": 10,
-    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["backlight", "pulseaudio","battery","network","clock"],
+    "modules-right": ["backlight", "pulseaudio", "battery", "network", "clock"],
+}
     
     "backlight": {
-     "device": "intel_backlight",
-     "format": "{percent}% {icon}",
-     "format-icons": ["1", "2"]
-    }
-
-    "custom/arch": {
-      "format": " logo ",
-      "on-click": "sh /home/arch/.config/wofi/config application_launcher"
-    }
+        "device": "intel_backlight",
+        "format": "{icons}",
+        "format-icons": ["1", "2"]
+    },
 
     "hyprland/window": {
         "format": "{}"
     },
-    
+
     "wlr/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "all-outputs": true,
-      "persistent_workspaces" :{
-         "1": [],
-	 "2": [],
-	 "3": [],
-	 "4": [],
-	 "5": [],
-	 "6": [],
-	 "7": [],
-	 "8": [],
-	 "9": [],
-	 "10": []
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
         },
         "format-icons": {
-         "1": "",
-         "2": "",
-         "3": "",
-         "4": "",
-         "5": "",
-         "6": "",
-         "7": "",
-         "8": "",
-         "9": "",
-         "10": "〇"
-         }
-    },
-    
-    "clock": {
-	"interval": 60,
-	"format": "{:%H:%M}",
-	"max-length": 25
-    }
-
-    "network": {
-    	"interface": "wlp2s0",
-    	"format": "{icon ifname}",
-    	"format-wifi": "{essid} ({signalStrength}%) wifi icon",
-    	"format-ethernet": "eth icon",
-    	"format-disconnected": "disconndected",
-    	"max-length": 50
-	}
-	
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰝟",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "󰋋",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "〇"
         }
     },
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "max-length": 25
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{icon ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) wifi icon",
+        "format-ethernet": "eth icon",
+        "format-disconnected": "disconndected",
+        "max-length": 50
+    },
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": "󰍬 {volume}%",
-        "format-source-muted": "󰍭",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+        "headphone": "󰋋",
+        "default": ["󰕿", "󰖀", "󰕾"]
     }
-}
+},
